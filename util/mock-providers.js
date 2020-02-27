@@ -191,7 +191,7 @@ export function mockApp(config, platform) {
 export function mockIonicApp(app, config, plt) {
     var appRoot = new IonicApp(null, null, mockElementRef(), mockRenderer(), config, plt, app);
     appRoot._loadingPortal = mockOverlayPortal(app, config, plt);
-    appRoot._toastPortal = mockOverlayPortal(app, config, plt);
+    appRoot._ToastAbPortal = mockOverlayPortal(app, config, plt);
     appRoot._overlayPortal = mockOverlayPortal(app, config, plt);
     appRoot._modalPortal = mockOverlayPortal(app, config, plt);
     return appRoot;

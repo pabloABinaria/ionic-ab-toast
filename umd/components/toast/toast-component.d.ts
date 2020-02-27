@@ -4,7 +4,7 @@ import { Config, NavParams, ViewController } from 'ionic-angular';
 /**
  * @hidden
  */
-export declare class ToastCmp implements AfterViewInit {
+export declare class ToastAbCmp implements AfterViewInit {
     _viewCtrl: ViewController;
     _config: Config;
     _elementRef: ElementRef;

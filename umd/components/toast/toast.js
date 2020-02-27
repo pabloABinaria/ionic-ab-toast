@@ -27,13 +27,13 @@ var __extends = (this && this.__extends) || (function () {
     /**
      * @hidden
      */
-    var Toast = (function (_super) {
-        __extends(Toast, _super);
-        function Toast(app, opts, config) {
+    var ToastAb = (function (_super) {
+        __extends(ToastAb, _super);
+        function ToastAb(app, opts, config) {
             if (opts === void 0) { opts = {}; }
             var _this = this;
             opts.dismissOnPageChange = util_1.isPresent(opts.dismissOnPageChange) ? !!opts.dismissOnPageChange : false;
-            _this = _super.call(this, toast_component_1.ToastCmp, opts, null) || this;
+            _this = _super.call(this, toast_component_1.ToastAbCmp, opts, null) || this;
             _this._app = app;
             // set the position to the bottom if not provided
             if (!opts.position || !_this.isValidPosition(opts.position)) {
@@ -51,48 +51,48 @@ var __extends = (this && this.__extends) || (function () {
         /**
         * @hidden
         */
-        Toast.prototype.getTransitionName = function (direction) {
+        ToastAb.prototype.getTransitionName = function (direction) {
             var key = 'toast' + (direction === 'back' ? 'Leave' : 'Enter');
             return this._nav && this._nav.config.get(key);
         };
         /**
         * @hidden
         */
-        Toast.prototype.isValidPosition = function (position) {
+        ToastAb.prototype.isValidPosition = function (position) {
             return position === TOAST_POSITION_TOP || position === TOAST_POSITION_MIDDLE || position === TOAST_POSITION_BOTTOM;
         };
         /**
          * @param {string} message  Toast message content
          */
-        Toast.prototype.setMessage = function (message) {
+        ToastAb.prototype.setMessage = function (message) {
             this.data.message = message;
             return this;
         };
         /**
          * @param {number} dur  Toast message duration
          */
-        Toast.prototype.setDuration = function (dur) {
+        ToastAb.prototype.setDuration = function (dur) {
             this.data.duration = dur;
             return this;
         };
         /**
          * @param {'top'|'middle'|'bottom'} pos  Toast message position
          */
-        Toast.prototype.setPosition = function (pos) {
+        ToastAb.prototype.setPosition = function (pos) {
             this.data.position = pos;
             return this;
         };
         /**
          * @param {string} cssClass  Toast message CSS class
          */
-        Toast.prototype.setCssClass = function (cssClass) {
+        ToastAb.prototype.setCssClass = function (cssClass) {
             this.data.cssClass = cssClass;
             return this;
         };
         /**
          * @param {boolean} closeButton  Toast message close button
          */
-        Toast.prototype.setShowCloseButton = function (closeButton) {
+        ToastAb.prototype.setShowCloseButton = function (closeButton) {
             this.data.showCloseButton = closeButton;
             return this;
         };
@@ -102,7 +102,7 @@ var __extends = (this && this.__extends) || (function () {
          * @param {NavOptions} [navOptions={}] Nav options to go with this transition.
          * @returns {Promise} Returns a promise which is resolved when the transition has completed.
          */
-        Toast.prototype.present = function (navOptions) {
+        ToastAb.prototype.present = function (navOptions) {
             if (navOptions === void 0) { navOptions = {}; }
             navOptions.disableApp = false;
             navOptions.keyboardClose = false;
@@ -111,12 +111,12 @@ var __extends = (this && this.__extends) || (function () {
         /**
          * Dismiss all toast components which have been presented.
          */
-        Toast.prototype.dismissAll = function () {
+        ToastAb.prototype.dismissAll = function () {
             this._nav && this._nav.popAll();
         };
-        return Toast;
+        return ToastAb;
     }(view_controller_1.ViewController));
-    exports.Toast = Toast;
+    exports.ToastAb = ToastAb;
     var TOAST_POSITION_TOP = 'top';
     var TOAST_POSITION_MIDDLE = 'middle';
     var TOAST_POSITION_BOTTOM = 'bottom';

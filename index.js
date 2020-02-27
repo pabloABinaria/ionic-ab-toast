@@ -1,3 +1,3 @@
-export { Toast } from './components/toast/toast';
-export { ToastCmp } from './components/toast/toast-component';
-export { ToastController } from './components/toast/toast-controller';
+export { ToastAb } from './components/toast/toast';
+export { ToastAbCmp } from './components/toast/toast-component';
+export { ToastAbController } from './components/toast/toast-controller';

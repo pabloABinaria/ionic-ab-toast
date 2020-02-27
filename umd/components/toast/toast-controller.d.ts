@@ -1,8 +1,8 @@
 import { App, Config } from 'ionic-angular';
-import { Toast } from './toast';
-import { ToastOptions } from './toast-options';
+import { ToastAb } from './toast';
+import { ToastAbOptions } from './toast-options';
 /**
- * @name ToastController
+ * @name ToastAbController
  * @description
  * A Toast is a subtle notification commonly used in modern applications.
  * It can be used to provide feedback about an operation or to
@@ -64,13 +64,13 @@ import { ToastOptions } from './toast-options';
  *
  * @demo /docs/demos/src/toast/
  */
-export declare class ToastController {
+export declare class ToastAbController {
     private _app;
     config: Config;
     constructor(_app: App, config: Config);
     /**
      * Create a new toast component. See options below
-     * @param {ToastOptions} opts Toast options. See the below table for available options.
+     * @param {ToastAbOptions} opts Toast options. See the below table for available options.
      */
-    create(opts?: ToastOptions): Toast;
+    create(opts?: ToastAbOptions): ToastAb;
 }

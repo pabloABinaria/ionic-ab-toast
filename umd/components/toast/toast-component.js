@@ -16,8 +16,8 @@
     /**
      * @hidden
      */
-    var ToastCmp = (function () {
-        function ToastCmp(_viewCtrl, _config, _elementRef, params, renderer) {
+    var ToastAbCmp = (function () {
+        function ToastAbCmp(_viewCtrl, _config, _elementRef, params, renderer) {
             this._viewCtrl = _viewCtrl;
             this._config = _config;
             this._elementRef = _elementRef;
@@ -36,7 +36,7 @@
                 this.hdrId = 'toast-hdr-' + this.id;
             }
         }
-        ToastCmp.prototype.ngAfterViewInit = function () {
+        ToastAbCmp.prototype.ngAfterViewInit = function () {
             var _this = this;
             // if there's a `duration` set, automatically dismiss.
             if (this.d.duration) {
@@ -46,7 +46,7 @@
             }
             this.enabled = true;
         };
-        ToastCmp.prototype.ionViewDidEnter = function () {
+        ToastAbCmp.prototype.ionViewDidEnter = function () {
             var activeElement = document.activeElement;
             if (activeElement) {
                 activeElement.blur();
@@ -56,17 +56,17 @@
                 focusableEle.focus();
             }
         };
-        ToastCmp.prototype.cbClick = function () {
+        ToastAbCmp.prototype.cbClick = function () {
             if (this.enabled) {
                 this.dismiss('close');
             }
         };
-        ToastCmp.prototype.dismiss = function (role) {
+        ToastAbCmp.prototype.dismiss = function (role) {
             clearTimeout(this.dismissTimeout);
             this.dismissTimeout = undefined;
             return this._viewCtrl.dismiss(null, role, { disableApp: false });
         };
-        ToastCmp.decorators = [
+        ToastAbCmp.decorators = [
             { type: core_1.Component, args: [{
                         selector: 'ion-toast',
                         template: '<div class="toast-wrapper" ' +
@@ -89,16 +89,16 @@
                     },] },
         ];
         /** @nocollapse */
-        ToastCmp.ctorParameters = function () { return [
+        ToastAbCmp.ctorParameters = function () { return [
             { type: view_controller_1.ViewController, },
             { type: config_1.Config, },
             { type: core_1.ElementRef, },
             { type: nav_params_1.NavParams, },
             { type: core_1.Renderer, },
         ]; };
-        return ToastCmp;
+        return ToastAbCmp;
     }());
-    exports.ToastCmp = ToastCmp;
+    exports.ToastAbCmp = ToastAbCmp;
     var toastIds = -1;
 });
 //# sourceMappingURL=toast-component.js.map

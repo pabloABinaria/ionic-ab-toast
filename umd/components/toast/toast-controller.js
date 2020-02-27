@@ -14,7 +14,7 @@
     var config_1 = require("../../config/config");
     var toast_1 = require("./toast");
     /**
-     * @name ToastController
+     * @name ToastAbController
      * @description
      * A Toast is a subtle notification commonly used in modern applications.
      * It can be used to provide feedback about an operation or to
@@ -45,9 +45,9 @@
      *
      * @usage
      * ```ts
-     * import { ToastController } from 'ionic-angular';
+     * import { ToastAbController } from 'ionic-angular';
      *
-     * constructor(public toastCtrl: ToastController) { }
+     * constructor(public toastCtrl: ToastAbController) { }
      *
      * presentToast() {
      *   const toast = this.toastCtrl.create({
@@ -76,8 +76,8 @@
      *
      * @demo /docs/demos/src/toast/
      */
-    var ToastController = (function () {
-        function ToastController(_app, config) {
+    var ToastAbController = (function () {
+        function ToastAbController(_app, config) {
             this._app = _app;
             this.config = config;
         }
@@ -85,20 +85,20 @@
          * Create a new toast component. See options below
          * @param {ToastOptions} opts Toast options. See the below table for available options.
          */
-        ToastController.prototype.create = function (opts) {
+        ToastAbController.prototype.create = function (opts) {
             if (opts === void 0) { opts = {}; }
-            return new toast_1.Toast(this._app, opts, this.config);
+            return new toast_1.ToastAb(this._app, opts, this.config);
         };
-        ToastController.decorators = [
+        ToastAbController.decorators = [
             { type: core_1.Injectable },
         ];
         /** @nocollapse */
-        ToastController.ctorParameters = function () { return [
+        ToastAbController.ctorParameters = function () { return [
             { type: app_1.App, },
             { type: config_1.Config, },
         ]; };
-        return ToastController;
+        return ToastAbController;
     }());
-    exports.ToastController = ToastController;
+    exports.ToastAbController = ToastAbController;
 });
 //# sourceMappingURL=toast-controller.js.map

@@ -1,11 +1,11 @@
 import { App, Config, NavOptions, ViewController} from 'ionic-angular';
-import { ToastOptions } from './toast-options';
+import { ToastAbOptions } from './toast-options';
 /**
  * @hidden
  */
-export declare class Toast extends ViewController {
+export declare class ToastAb extends ViewController {
     private _app;
-    constructor(app: App, opts: ToastOptions, config: Config);
+    constructor(app: App, opts: ToastAbOptions, config: Config);
     /**
     * @hidden
     */
@@ -17,23 +17,23 @@ export declare class Toast extends ViewController {
     /**
      * @param {string} message  Toast message content
      */
-    setMessage(message: string): Toast;
+    setMessage(message: string): ToastAb;
     /**
      * @param {number} dur  Toast message duration
      */
-    setDuration(dur: number): Toast;
+    setDuration(dur: number): ToastAb;
     /**
      * @param {'top'|'middle'|'bottom'} pos  Toast message position
      */
-    setPosition(pos: 'top' | 'middle' | 'bottom'): Toast;
+    setPosition(pos: 'top' | 'middle' | 'bottom'): ToastAb;
     /**
      * @param {string} cssClass  Toast message CSS class
      */
-    setCssClass(cssClass: string): Toast;
+    setCssClass(cssClass: string): ToastAb;
     /**
      * @param {boolean} closeButton  Toast message close button
      */
-    setShowCloseButton(closeButton: boolean): Toast;
+    setShowCloseButton(closeButton: boolean): ToastAb;
     /**
      * Present the toast instance.
      *

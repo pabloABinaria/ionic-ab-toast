@@ -1,4 +1,4 @@
-export interface ToastOptions {
+export interface ToastAbOptions {
     image?: string;
     message?: string;
     subMessage?: string;
